@@ -1,0 +1,43 @@
+.results__content {
+  width: 100%;
+  max-width: 80%;
+  margin: 30px auto;
+
+  &--no-data {
+    padding: 20px;
+    text-align: left;
+  }
+}
+
+.result {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  width: 70%;
+
+  &__link {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 5px;
+    display: block;
+    text-decoration: none;
+  }
+
+  &__title {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a0dab;
+    margin-bottom: 5px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #4d5156;
+    line-height: 1.5;
+  }
+}

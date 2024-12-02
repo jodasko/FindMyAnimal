@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #d3d3d3;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333333;
+      margin-right: 5px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      color: #333333;
+      opacity: 0.8;
+    }
+
+    &-logo {
+      cursor: pointer;
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    &-profile {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    &-menu {
+      position: relative;
+      top: 2px;
+      right: 10px;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 75%;
+  }
+}
+
+// Small viewports
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+  }
+
+  .header__search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .header__brand-logo {
+    margin: 0 10px 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__actions {
+    display: none;
+  }
+}
