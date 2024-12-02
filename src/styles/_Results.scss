@@ -1,0 +1,46 @@
+@use "./Variables" as *;
+
+.results__content {
+  width: 100%;
+  max-width: 80%;
+  margin: 30px auto;
+
+  &--no-data {
+    padding: 20px;
+    text-align: left;
+    padding-top: 0;
+  }
+}
+
+.result {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  width: 70%;
+
+  &__link {
+    font-size: $font-size-small;
+    color: $text-color-main;
+    margin-bottom: 5px;
+    display: block;
+    text-decoration: none;
+  }
+
+  &__title {
+    cursor: pointer;
+    font-size: $font-size-tall;
+    font-weight: bold;
+    color: $text-color-link;
+    margin-bottom: 5px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__description {
+    font-size: $font-size-medium;
+    color: $text-color-main;
+    line-height: 1.5;
+  }
+}
