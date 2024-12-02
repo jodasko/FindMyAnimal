@@ -1,0 +1,18 @@
+@use "./Variables" as *;
+
+@use "./Home";
+@use "./Header";
+@use "./Footer";
+@use "./SearchInput";
+@use "./SearchButton";
+@use "./LoadingSkeleton";
+@use "./ModalOverlay";
+@use "./Results";
+@use "./Card";
+
+body {
+  font-family: $font-family;
+  background-color: $primary-color;
+  margin: 0;
+  padding: 0;
+}

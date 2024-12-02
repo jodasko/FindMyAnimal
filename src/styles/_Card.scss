@@ -1,0 +1,64 @@
+@use "./Variables" as *;
+
+.card {
+  position: absolute;
+  right: 5%;
+  max-width: 300px;
+  width: 100%;
+  background-color: $primary-color;
+  padding: 15px 8px;
+  border: 1px solid $gray-light-color;
+  border-radius: 8px;
+  text-align: center;
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__image {
+      width: 95%;
+      height: 30vh;
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      font-size: $font-size-small;
+      color: $text-color-main;
+      margin-bottom: 6px;
+      text-decoration: none;
+    }
+
+    &__title {
+      font-size: $font-size-tall;
+      font-weight: bold;
+      color: $text-color-dark;
+      margin: 3px 0;
+    }
+
+    &__description {
+      font-size: $font-size-medium;
+      color: $text-color-main;
+      text-align: left;
+      margin: 6px 0;
+    }
+  }
+}
+
+// Small viewports
+@media screen and (max-width: 768px) {
+  .card {
+    position: fixed;
+    max-width: 50%;
+    height: auto;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: $primary-color;
+    box-shadow: 0 2px 10px $box-shadow-background-color;
+    border-radius: 0;
+    z-index: 1000;
+  }
+}

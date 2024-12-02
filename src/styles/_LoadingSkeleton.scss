@@ -1,0 +1,44 @@
+@use "./Variables" as *;
+
+.skeleton {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .skeleton__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .skeleton__line {
+    height: 12px;
+    background-color: $second-color;
+    animation: fade-in-out 1.5s infinite;
+
+    &--short {
+      width: 30%;
+    }
+
+    &--medium {
+      height: 20px;
+      width: 60%;
+    }
+
+    &--full {
+      width: 100%;
+    }
+  }
+
+  @keyframes fade-in-out {
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
