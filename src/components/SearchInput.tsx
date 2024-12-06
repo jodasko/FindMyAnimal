@@ -1,5 +1,8 @@
 import { useSearchContext } from "../contexts/SearchContext";
 
+type InputEvent = React.ChangeEvent<HTMLInputElement>;
+type KeyboardEvent = React.KeyboardEvent<HTMLFormElement>);
+
 const SearchInput = () => {
   const {
     setSearchTerm,
@@ -10,13 +13,13 @@ const SearchInput = () => {
     setIsErrorVisible,
   } = useSearchContext();
 
-  const onInputChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  const onInputChange = ({ target }: InputEvent) => {
     setSearchTerm(target.value);
     setError(false);
     setIsErrorVisible(false);
   };
 
-  const handleSubmit = (event: React.KeyboardEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: KeyboardEvent) => {
     event.preventDefault();
     if (searchTerm.trim().length < 1) {
       return;
