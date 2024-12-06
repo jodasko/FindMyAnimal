@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useSearchHandler } from "../hooks/useSearchHandler";
 import { ResultData } from "../models/Animals.model";
 
+type DispatchResultData = React.Dispatch<React.SetStateAction<ResultData | null>>;
+type DispatchErrorState = React.Dispatch<React.SetStateAction<boolean>>;
 type SearchState = {
   data: ResultData[];
   searchTerm: string;
@@ -12,11 +14,11 @@ type SearchState = {
   isLoading: boolean;
   setIsLoading: (value: boolean) => void;
   selectedResult: ResultData | null;
-  setSelectedResult: React.Dispatch<React.SetStateAction<ResultData | null>>;
+  setSelectedResult: DispatchResultData;
   handleSearch: () => void;
   onInitPage: () => void;
   error: boolean;
-  setError: React.Dispatch<React.SetStateAction<boolean>>;
+  setError: DispatchErrorState;
   isErrorVisible: boolean;
   setIsErrorVisible: (shown: boolean) => void;
 };
