@@ -80,7 +80,6 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-// Hook to access the HeaderContext
 export const useSearchContext = (): SearchState => {
   const context = useContext(SearchContext);
   if (!context) {
